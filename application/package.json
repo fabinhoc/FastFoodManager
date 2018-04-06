@@ -2,7 +2,7 @@
   "name": "application",
   "version": "1.0.0",
   "description": "System developed to meet needs for fast food trade segments",
-  "main": "index.js",
+  "main": "loader.js",
   "scripts": {
     "dev": "nodemon",
     "production": "pm2 start loader.js --name application"
