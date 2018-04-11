@@ -9,4 +9,8 @@ module.exports = function(server){
     router.route('/teste').get(function(req, res, next){
         res.send('funcionou')
     })
+
+    // ROTAS DA API
+    const billingCycleService = require('../api/product/productService')
+    billingCycleService.register(router, '/products')
 }   
