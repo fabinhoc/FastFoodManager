@@ -11,6 +11,9 @@ module.exports = function(server){
     })
 
     // ROTAS DA API
-    const billingCycleService = require('../api/product/productService')
-    billingCycleService.register(router, '/products')
+    const productService = require('../api/product/productService')
+    productService.register(router, '/products')
+
+    const categoryService = require('../api/product/categoryService')
+    categoryService.register(router, '/categories')
 }   

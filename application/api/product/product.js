@@ -1,5 +1,11 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
+const Schema = mongoose.Schema;
+
+// const productSchema = new mongoose.Schema({
+//     name: {type: String, required: true},
+//     category : {type: Schema.ObjectId, ref: 'Category', required:true}
+// })
 
 const statusSchema = new mongoose.Schema({
     status: { type:String, default:'active',
@@ -32,5 +38,10 @@ const productSchema = new mongoose.Schema({
     }
 })
 
-module.exports = restful.model('Product', productSchema)
-// module.exports = restful.model('Category', categorySchema)
+const Product = restful.model('Product', productSchema)
+const Category = restful.model('Category', categorySchema)
+
+module.exports = {
+    Product: Product,
+    Category: Category
+}
