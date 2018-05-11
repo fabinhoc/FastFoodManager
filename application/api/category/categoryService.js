@@ -1,5 +1,4 @@
-const Schema = require('./product')
-const Category = Schema.Category
+const Category = require('./category')
 
 Category.methods(['get', 'post', 'put', 'delete'])
 Category.updateOptions({ new: true, runValidators: true })

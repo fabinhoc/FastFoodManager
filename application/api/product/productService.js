@@ -1,5 +1,4 @@
-const Schema = require('./product')
-const Product = Schema.Product
+const Product = require('./product')
 
 Product.methods(['get','post','put','delete'])
 Product.updateOptions({ new:true, runValidators:true })
