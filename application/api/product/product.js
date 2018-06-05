@@ -10,7 +10,7 @@ const statusSchema = new mongoose.Schema({
 
 const productSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    photo: {type: String, required: true},
+    photo: {type: String},
     category : {type: Schema.ObjectId, ref: 'Category', required:true},
     quantity : {type: Number, default: 0},
     price: {type: Number, default: 0},
