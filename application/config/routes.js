@@ -40,4 +40,8 @@ module.exports = function(server){
         
     })
 
+    router.route('/assets/:image').get(function(req, res, next){
+        res.sendFile(process.cwd() + "\/assets\/" + req.params.image)
+    })
+
 }   

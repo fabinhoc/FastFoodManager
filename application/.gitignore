@@ -1,2 +1,5 @@
 node_modules
 *.log
+assets/*.png
+assets/*.jpg
+assets/*.gif
