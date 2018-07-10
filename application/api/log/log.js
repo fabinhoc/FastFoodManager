@@ -3,7 +3,7 @@ const mongoose = restful.mongoose
 const Schema = mongoose.Schema;
 
 const logSchema = new mongoose.Schema({
-    table: {type: String, required: true},
+    reference: {type: String, required: true},
     action: {type: String, required: true},
     element: {type: Schema.ObjectId},
     message: {type: String, required: true},
