@@ -23,8 +23,8 @@ module.exports = function(server){
     const categoryService = require('../api/category/categoryService')
     categoryService.register(router, '/categories')
 
-    const categoryService = require('../api/log/logService')
-    categoryService.register(router, '/log')
+    const logService = require('../api/log/logService')
+    logService.register(router, '/log')
 
     router.post('/save/image/base64', upload.single('avatar'), function(req, res, next){
 
