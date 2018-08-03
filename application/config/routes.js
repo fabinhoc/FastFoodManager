@@ -17,11 +17,17 @@ module.exports = function(server){
     })
 
     // ROTAS DA API
+    const menuService = require('../api/menu/menuService')
+    menuService.register(router, '/menu')
+
     const productService = require('../api/product/productService')
     productService.register(router, '/products')
 
     const categoryService = require('../api/category/categoryService')
     categoryService.register(router, '/categories')
+
+    const itemService = require('../api/item/itemService')
+    itemService.register(router, '/items')
 
     const logService = require('../api/log/logService')
     logService.register(router, '/log')

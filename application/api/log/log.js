@@ -7,7 +7,9 @@ const logSchema = new mongoose.Schema({
     action: {type: String, required: true},
     element: {type: Schema.ObjectId},
     message: {type: String, required: true},
-    icon : {type: String}
+    icon : {type: String},
+    createAt : {type: Date, default: Date.now },
+    user: {type:String}
 })
 
 module.exports = restful.model('Log', logSchema)

@@ -9,6 +9,7 @@ const iconSchema = new mongoose.Schema({
 
 const categorySchema = new mongoose.Schema({
     name: { type: String, required: true },
+    menu : {type: Schema.ObjectId, ref: 'Menu', required:true},
     icon: { type: [iconSchema], validate: [function (value) { return value.length > 0; }, " '{PATH}' is required!"] },
     status: {
         type: String, default: 'active',
