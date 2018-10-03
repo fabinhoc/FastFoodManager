@@ -3,10 +3,23 @@ const multer = require('multer')
 const upload = multer({ dest: 'assets/' })
 const fs = require('fs')
 const base64ToImage = require('base64-to-image')
+const auth = require('./auth')
 
 
 
 module.exports = function(server){
+
+    /*
+    * Rotas abertas
+    */
+    const openApi = express.Router()
+    server.use('/oapi', openApi)
+    const AuthService = require('../api/user/AuthService')
+
+    openApi.post('/login', AuthService.login)
+    openApi.post('/signup', AuthService.signup)
+    openApi.post('/validateToken', AuthService.validateToken)
+    
 
     // API ROUTES
     const router = express.Router()

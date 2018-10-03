@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "base64-to-image": "^1.0.2",
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-query-int": "^3.0.0",
+    "jsonwebtoken": "^7.3.0",
     "lodash": "^4.17.5",
     "mongoose": "^5.0.13",
     "mongoose-paginate": "^5.0.3",
